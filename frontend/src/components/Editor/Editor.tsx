@@ -6,6 +6,8 @@ import "ace-builds/src-noconflict/mode-typescript";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/mode-lua";
 import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/theme-tomorrow";
+import "ace-builds/src-noconflict/theme-nord_dark";
 
 import style from "./Editor.module.css";
 import Buttons from "./Buttons/Buttons";
@@ -58,7 +60,7 @@ export default function Editor() {
         defaultValue={editor.defaultCode}
         setOptions={{ useWorker: false }}
         tabSize={editor.lang === "python" ? 4 : 2}
-        theme={editor.theme === "light" ? "textmate" : "monokai"}
+        theme={editor.theme === "light" ? "tomorrow" : "nord_dark"}
         onChange={(code) => setEditor({ ...editor, code })}
         {...defaultOptions}
       />
