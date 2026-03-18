@@ -9,7 +9,7 @@
     let theme = mapTheme(localStorage.getItem("mdbook-theme") || document.querySelector(".theme.theme-selected")?.id);
     const postmessage = (msg) => iframeElement.contentWindow.postMessage({ repl: msg }, "*");
     function mapTheme(bookTheme) {
-      return bookTheme === "light" || bookTheme === "rust" ? "light" : "dark";
+      return bookTheme === "light" || bookTheme === "rust" || bookTheme === "material-lighter" ? "light" : "dark";
     }
     function getCode(element) {
       // remove all the boring elements
