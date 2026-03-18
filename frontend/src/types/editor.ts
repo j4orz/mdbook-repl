@@ -9,7 +9,8 @@ const Editor = z.object({
   code: z.string(),
   defaultCode: z.string(),
   theme: z.enum(["dark", "light"]),
-  readonly: z.boolean()
+  readonly: z.boolean(),
+  backgroundColor: z.string().optional()
 });
 
 type EditorType = z.infer<typeof Editor>;

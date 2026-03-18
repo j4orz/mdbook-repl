@@ -48,7 +48,7 @@ export default function Editor() {
   }, [editor, outputs]);
 
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} style={editor.backgroundColor ? { backgroundColor: editor.backgroundColor } : undefined}>
       <Buttons />
       <AceEditor
         width="100%"
