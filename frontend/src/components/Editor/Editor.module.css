@@ -1,5 +1,6 @@
 .wrapper {
-  @apply relative bg-zinc-100 dark:bg-zinc-800 py-3 px-1 rounded-sm;
+  @apply relative bg-zinc-100 dark:bg-zinc-800 py-3 px-1 rounded-sm overflow-y-auto;
+  max-height: 600px;
 }
 
 .buttons:has(:disabled),
